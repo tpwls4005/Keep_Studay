@@ -1,0 +1,79 @@
+### JS - 5days
+
+## 문제1
+````
+function greet(){
+    console.log("안녕 내 이름은 제시카야")
+}
+````
+
+## 문제2
+````
+function greet(name){
+  console.log("안녕 내이름은", name)
+}
+
+greet("제시카")
+````
+
+## 문제3
+````
+function greet(name){
+  console.log("안녕 내이름은", name);
+  return name;
+}
+
+let returnedName = greet("제시카");
+console.log("반환된 이름:", returnedName);
+````
+
+## 문제4
+````
+function meetAt(year, month, day){
+  if(year){
+    console.log(year,"년")
+  }else if(year, month){
+    console.log(year,"년",month,"월")
+  }
+  console.log(year,"/",month,"/",day)
+}
+
+meetAt(2024,2,29)
+````
+
+## 문제5
+````
+function findSmallestElement(arr){
+  let result = arr[0];
+  if(arr.length == 0){
+    console.log("arr가 0입니다.");
+    return 0;
+  }
+  for(let i=1; i<arr.length; i++){
+    if(result > arr[i]){
+      result = arr[i];
+    }
+  }
+  console.log(arr);
+  return result; // 최소값을 반환
+}
+
+let smallestNumber = findSmallestElement([100,200,3,0,2,1]);
+console.log("가장 작은 수:", smallestNumber);
+````
+
+## 문제6
+````
+let unit = [50000,10000,5000,1000,500,100]
+function changeCalculate(money) {
+  for(let i=0;i<unit.length;i++){
+
+      let num = Math.floor(money / unit[i])
+      console.log(unit[i]+"X"+num)
+      money = money - (unit[i]*num)
+
+  }
+}
+
+changeCalculate(12300)
+````
